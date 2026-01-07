@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAEB HAST | Premium Headwear</title>
+    <title>CAEB HAST | Premium Drops</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -14,7 +14,7 @@
         <div class="logo">CAEB<span>HAST</span></div>
         <div class="nav-links">
             <a href="#productos">Colección</a>
-            <a href="#pedido" class="nav-btn">Comprar Ahora</a>
+            <a href="#pedido">Comprar Ahora</a>
         </div>
     </nav>
 
@@ -22,9 +22,7 @@
         <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
             <h1 class="glitch-text">CAEB HAST</h1>
             <p>EL ESTADO MENTAL DEL ESTILO URBANO</p>
-            <div class="hero-btns">
-                <a href="#productos" class="btn-main">EXPLORAR</a>
-            </div>
+            <a href="#productos" class="btn-main">EXPLORAR</a>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -32,28 +30,51 @@
     <section id="productos" class="products">
         <h2 data-aos="fade-up">DROPS EXCLUSIVOS</h2>
         <div class="product-grid">
-            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="badge">Nuevo</div>
+            
+            <div class="product-card" data-aos="fade-up">
                 <div class="product-img">
-                   <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=1000&auto=format&fit=crop" alt="Gorra 1">
+                   <img src="https://i.ibb.co/LdM9hXp/Gorra1.jpg" alt="Obsidian Echo">
                 </div>
                 <div class="product-info">
-                    <h3>OBSIDIAN SNAPBACK</h3>
-                    <p class="price">$35.00 USD</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Obsidian Snapback')">AGREGAR</button>
+                    <h3>OBSIDIAN ECHO SNAPBACK</h3>
+                    <p class="price">$1300 MXN</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Obsidian Echo Snapback')">AGREGAR</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-img">
+                    <img src="https://i.ibb.co/Y7X5T3P/Gorra2.jpg" alt="Crimson Code">
+                </div>
+                <div class="product-info">
+                    <h3>CRIMSON CODE BASEBALL</h3>
+                    <p class="price">$1300 MXN</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Crimson Code Baseball')">AGREGAR</button>
                 </div>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=1000&auto=format&fit=crop" alt="Gorra 2">
+                    <img src="https://i.ibb.co/VmxM6Y9/Gorra3.jpg" alt="Urban Firestorm">
                 </div>
                 <div class="product-info">
-                    <h3>CYBER TRUCKER</h3>
-                    <p class="price">$42.00 USD</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Cyber Trucker')">AGREGAR</button>
+                    <h3>URBAN FIRESTORM SNAPBACK</h3>
+                    <p class="price">$1300 MXN</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Urban Firestorm Snapback')">AGREGAR</button>
                 </div>
             </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-img">
+                    <img src="https://i.ibb.co/kM4TfX8/Gorra4.jpg" alt="Pink Nebula">
+                </div>
+                <div class="product-info">
+                    <h3>PINK NEBULA SNAPBACK</h3>
+                    <p class="price">$1300 MXN</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Pink Nebula Snapback')">AGREGAR</button>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -65,30 +86,33 @@
             </div>
             <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="modern-form">
                 <div class="input-group">
-                    <label>ARTÍCULO</label>
+                    <label>ARTÍCULO SELECCIONADO</label>
                     <input type="text" id="producto_elegido" name="producto" readonly required>
                 </div>
                 <div class="input-group">
                     <label>NOMBRE COMPLETO</label>
-                    <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
                 </div>
                 <div class="input-group">
-                    <label>WHATSAPP / TELEFONO</label>
-                    <input type="tel" name="telefono" placeholder="+00 000 000 000" required>
+                    <label>WHATSAPP / TELÉFONO</label>
+                    <input type="tel" name="telefono" placeholder="+52 ..." required>
                 </div>
                 <div class="input-group">
                     <label>DIRECCIÓN DE ENTREGA</label>
-                    <textarea name="direccion" placeholder="Calle, Ciudad, Estado..." required></textarea>
+                    <textarea name="direccion" placeholder="Calle, Número, Colonia, Ciudad..." required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">FINALIZAR COMPRA</button>
             </form>
         </div>
     </section>
 
+    <a href="https://wa.me/TU_NUMERO_AQUI" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
     <footer>
         <div class="footer-content">
-            <div class="logo-small">CAEB HAST</div>
-            <p>Sigue la cultura @CAEB_HAST</p>
+            <p>&copy; 2026 CAEB HAST. High End Headwear.</p>
         </div>
     </footer>
 
@@ -97,7 +121,7 @@
         AOS.init();
         function seleccionarProducto(nombre) {
             document.getElementById('producto_elegido').value = nombre;
-            window.location.href = "#pedido";
+            window.location.hash = "pedido";
         }
     </script>
 </body>
