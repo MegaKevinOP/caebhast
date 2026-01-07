@@ -3,71 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAEB HAST | Gorras Exclusivas</title>
+    <title>CAEB HAST | Premium Headwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">CAEB HAST</div>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#pedido">Hacer Pedido</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo">CAEB<span>HAST</span></div>
+        <div class="nav-links">
+            <a href="#productos">Colección</a>
+            <a href="#pedido" class="nav-btn">Comprar Ahora</a>
+        </div>
+    </nav>
 
     <section class="hero">
-        <h1>ESTILO SIN LÍMITES</h1>
-        <p>Descubre la colección premium de CAEB HAST.</p>
-        <a href="#productos" class="btn-primary">Ver Colección</a>
+        <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="glitch-text">CAEB HAST</h1>
+            <p>EL ESTADO MENTAL DEL ESTILO URBANO</p>
+            <div class="hero-btns">
+                <a href="#productos" class="btn-main">EXPLORAR</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
     </section>
 
     <section id="productos" class="products">
-        <h2>Nuestras Gorras</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="img-placeholder">Gorra Black Edition</div>
-                <h3>Classic Black</h3>
-                <p>$25.00</p>
-                <button onclick="seleccionarProducto('Classic Black')">Comprar ahora</button>
+        <h2 data-aos="fade-up">DROPS EXCLUSIVOS</h2>
+        <div class="product-grid">
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="badge">Nuevo</div>
+                <div class="product-img">
+                   <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=1000&auto=format&fit=crop" alt="Gorra 1">
+                </div>
+                <div class="product-info">
+                    <h3>OBSIDIAN SNAPBACK</h3>
+                    <p class="price">$35.00 USD</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Obsidian Snapback')">AGREGAR</button>
+                </div>
             </div>
-            <div class="card">
-                <div class="img-placeholder">Gorra Street White</div>
-                <h3>Street White</h3>
-                <p>$28.00</p>
-                <button onclick="seleccionarProducto('Street White')">Comprar ahora</button>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=1000&auto=format&fit=crop" alt="Gorra 2">
+                </div>
+                <div class="product-info">
+                    <h3>CYBER TRUCKER</h3>
+                    <p class="price">$42.00 USD</p>
+                    <button class="buy-btn" onclick="seleccionarProducto('Cyber Trucker')">AGREGAR</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="pedido" class="form-section">
-        <div class="container">
-            <h2>Finaliza tu Compra</h2>
-            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
-                <label>Gorra Seleccionada</label>
-                <input type="text" id="producto_elegido" name="producto" readonly required>
-                
-                <label>Nombre Completo</label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                
-                <label>Correo Electrónico</label>
-                <input type="email" name="email" placeholder="correo@ejemplo.com" required>
-                
-                <label>Dirección de Envío</label>
-                <textarea name="direccion" rows="3" required></textarea>
-
-                <button type="submit" class="btn-submit">Confirmar Pedido</button>
+    <section id="pedido" class="checkout">
+        <div class="form-container" data-aos="flip-left">
+            <div class="form-header">
+                <h2>TU PEDIDO</h2>
+                <p>Completa los datos para el envío</p>
+            </div>
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="modern-form">
+                <div class="input-group">
+                    <label>ARTÍCULO</label>
+                    <input type="text" id="producto_elegido" name="producto" readonly required>
+                </div>
+                <div class="input-group">
+                    <label>NOMBRE COMPLETO</label>
+                    <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="input-group">
+                    <label>WHATSAPP / TELEFONO</label>
+                    <input type="tel" name="telefono" placeholder="+00 000 000 000" required>
+                </div>
+                <div class="input-group">
+                    <label>DIRECCIÓN DE ENTREGA</label>
+                    <textarea name="direccion" placeholder="Calle, Ciudad, Estado..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">FINALIZAR COMPRA</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 CAEB HAST. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="logo-small">CAEB HAST</div>
+            <p>Sigue la cultura @CAEB_HAST</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function seleccionarProducto(nombre) {
+            document.getElementById('producto_elegido').value = nombre;
+            window.location.href = "#pedido";
+        }
+    </script>
 </body>
 </html>
