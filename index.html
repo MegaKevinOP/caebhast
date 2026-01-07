@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAEB HAST | Premium Drops</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>CAEB HAST | Premium Streetwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,115 +13,107 @@
     <nav class="navbar">
         <div class="logo">CAEB<span>HAST</span></div>
         <div class="nav-links">
-            <a href="#productos">Colección</a>
-            <a href="#pedido">Comprar Ahora</a>
+            <a href="#productos">COLECCIÓN</a>
+            <a href="#pedido" class="btn-nav">COMPRAR</a>
         </div>
     </nav>
 
     <section class="hero">
-        <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
-            <h1 class="glitch-text">CAEB HAST</h1>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="glitch">CAEB HAST</h1>
             <p>EL ESTADO MENTAL DEL ESTILO URBANO</p>
-            <a href="#productos" class="btn-main">EXPLORAR</a>
+            <a href="#productos" class="btn-cta">VER LANZAMIENTOS</a>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
     <section id="productos" class="products">
-        <h2 data-aos="fade-up">DROPS EXCLUSIVOS</h2>
+        <div class="section-title" data-aos="fade-up">
+            <h2>DROPS EXCLUSIVOS</h2>
+            <div class="underline"></div>
+        </div>
+
         <div class="product-grid">
-            
             <div class="product-card" data-aos="fade-up">
-                <div class="product-img">
-                   <img src="https://i.ibb.co/LdM9hXp/Gorra1.jpg" alt="Obsidian Echo">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=800" alt="Obsidian Echo">
                 </div>
                 <div class="product-info">
-                    <h3>OBSIDIAN ECHO SNAPBACK</h3>
+                    <h3>OBSIDIAN ECHO</h3>
                     <p class="price">$1300 MXN</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Obsidian Echo Snapback')">AGREGAR</button>
+                    <button class="add-btn" onclick="seleccionar('OBSIDIAN ECHO')">AGREGAR AL PEDIDO</button>
                 </div>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="product-img">
-                    <img src="https://i.ibb.co/Y7X5T3P/Gorra2.jpg" alt="Crimson Code">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?q=80&w=800" alt="Crimson Code">
                 </div>
                 <div class="product-info">
-                    <h3>CRIMSON CODE BASEBALL</h3>
+                    <h3>CRIMSON CODE</h3>
                     <p class="price">$1300 MXN</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Crimson Code Baseball')">AGREGAR</button>
+                    <button class="add-btn" onclick="seleccionar('CRIMSON CODE')">AGREGAR AL PEDIDO</button>
                 </div>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-img">
-                    <img src="https://i.ibb.co/VmxM6Y9/Gorra3.jpg" alt="Urban Firestorm">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1618354771410-21f01d436b10?q=80&w=800" alt="Urban Firestorm">
                 </div>
                 <div class="product-info">
-                    <h3>URBAN FIRESTORM SNAPBACK</h3>
+                    <h3>URBAN FIRESTORM</h3>
                     <p class="price">$1300 MXN</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Urban Firestorm Snapback')">AGREGAR</button>
+                    <button class="add-btn" onclick="seleccionar('URBAN FIRESTORM')">AGREGAR AL PEDIDO</button>
                 </div>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="product-img">
-                    <img src="https://i.ibb.co/kM4TfX8/Gorra4.jpg" alt="Pink Nebula">
+                <div class="product-img-container">
+                    <img src="https://images.unsplash.com/photo-1572307480813-ceb0e59d8325?q=80&w=800" alt="Pink Nebula">
                 </div>
                 <div class="product-info">
-                    <h3>PINK NEBULA SNAPBACK</h3>
+                    <h3>PINK NEBULA</h3>
                     <p class="price">$1300 MXN</p>
-                    <button class="buy-btn" onclick="seleccionarProducto('Pink Nebula Snapback')">AGREGAR</button>
+                    <button class="add-btn" onclick="seleccionar('PINK NEBULA')">AGREGAR AL PEDIDO</button>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="pedido" class="checkout">
-        <div class="form-container" data-aos="flip-left">
-            <div class="form-header">
-                <h2>TU PEDIDO</h2>
-                <p>Completa los datos para el envío</p>
-            </div>
-            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="modern-form">
-                <div class="input-group">
-                    <label>ARTÍCULO SELECCIONADO</label>
-                    <input type="text" id="producto_elegido" name="producto" readonly required>
+        <div class="glass-form" data-aos="zoom-in">
+            <h2>FINALIZAR PEDIDO</h2>
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+                <div class="input-box">
+                    <input type="text" id="producto_input" name="gorra" readonly required>
+                    <label>ARTÍCULO</label>
                 </div>
-                <div class="input-group">
+                <div class="input-box">
+                    <input type="text" name="nombre" required>
                     <label>NOMBRE COMPLETO</label>
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
                 </div>
-                <div class="input-group">
-                    <label>WHATSAPP / TELÉFONO</label>
-                    <input type="tel" name="telefono" placeholder="+52 ..." required>
+                <div class="input-box">
+                    <input type="tel" name="whatsapp" required>
+                    <label>WHATSAPP / CELULAR</label>
                 </div>
-                <div class="input-group">
-                    <label>DIRECCIÓN DE ENTREGA</label>
-                    <textarea name="direccion" placeholder="Calle, Número, Colonia, Ciudad..." required></textarea>
+                <div class="input-box">
+                    <textarea name="direccion" required></textarea>
+                    <label>DIRECCIÓN COMPLETA</label>
                 </div>
-                <button type="submit" class="submit-btn">FINALIZAR COMPRA</button>
+                <button type="submit" class="finish-btn">CONFIRMAR COMPRA ($1300 MXN)</button>
             </form>
         </div>
     </section>
 
-    <a href="https://wa.me/TU_NUMERO_AQUI" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/TUNUMERO" class="wa-btn" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 CAEB HAST. High End Headwear.</p>
-        </div>
-    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        function seleccionarProducto(nombre) {
-            document.getElementById('producto_elegido').value = nombre;
-            window.location.hash = "pedido";
+        function seleccionar(nombre) {
+            document.getElementById('producto_input').value = nombre;
+            window.location.hash = 'pedido';
         }
     </script>
 </body>
